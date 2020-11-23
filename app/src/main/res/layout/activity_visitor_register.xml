@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<carbon.widget.LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".fragments.viewPagerFragment.VisitorRegister">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="25dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <com.hbb20.CountryCodePicker
+                    android:id="@+id/ccp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/countrycode"
+                    android:elevation="4dp"
+                    android:padding="8.8dp"
+                    app:ccpDialog_textColor="#fff"
+                    app:ccp_contentColor="#fff"
+                    app:ccp_defaultNameCode="AE"
+                    app:ccp_flagBorderColor="#fff"
+                    app:ccp_textSize="12sp" />
+
+                <EditText
+                    android:id="@+id/phoneNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/mobile"
+                    android:elevation="4dp"
+                    android:gravity="left|center"
+                    android:hint="Mobile Number"
+                    android:padding="15dp"
+                    android:textColor="#fff"
+                    android:textColorHint="#A9A9A9"
+                    android:textSize="15sp" />
+
+
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/visitorName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="25dp"
+                android:background="@drawable/edittext_bg"
+                android:elevation="4dp"
+                android:gravity="left|center"
+                android:hint="Username"
+                android:padding="15dp"
+                android:textColor="#fff"
+                android:textColorHint="#A9A9A9"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/visitorEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="25dp"
+                android:background="@drawable/edittext_bg"
+                android:elevation="4dp"
+                android:gravity="left|center"
+                android:hint="Email"
+                android:padding="15dp"
+                android:textColor="#fff"
+                android:textColorHint="#A9A9A9"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/visitorPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="25dp"
+                android:background="@drawable/edittext_bg"
+                android:elevation="4dp"
+                android:gravity="left|center"
+                android:hint="Password"
+                android:padding="15dp"
+                android:textColor="#fff"
+                android:textColorHint="#A9A9A9"
+                android:textSize="15sp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/name_text_input"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="25dp"
+                android:background="@drawable/edittext_bg"
+                android:elevation="4dp"
+                android:gravity="center"
+                app:boxBackgroundMode="none"
+                app:boxCornerRadiusBottomEnd="15dp"
+                app:boxCornerRadiusBottomStart="15dp"
+                app:boxCornerRadiusTopEnd="15dp"
+                app:boxCornerRadiusTopStart="15dp"
+                app:boxStrokeWidth="0dp"
+                app:hintEnabled="false"
+                app:hintTextColor="#A9A9A9">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/description"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:hint="Description"
+                    android:lines="5"
+                    android:maxLines="5"
+                    android:textColorHint="#A9A9A9" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <carbon.widget.Button
+                android:id="@+id/btnSelect"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="25dp"
+                android:background="@drawable/pager_bg"
+                android:elevation="4dp"
+                android:padding="15dp"
+                android:text="Import images of emirates ID"
+                android:textColor="#ae863b"
+                android:textSize="15sp"
+                android:visibility="gone"
+                app:carbon_cornerRadius="15dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginRight="10dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <ImageView
+                        android:id="@+id/visitorImage"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="13dp"
+                        android:layout_weight="1"
+                        android:src="@drawable/add" />
+
+                    <ImageView
+                        android:id="@+id/visitorImage1"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="13dp"
+                        android:layout_weight="1"
+                        android:src="@drawable/add" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:textColor="@color/carbon_red_400"
+                    android:textSize="14sp"
+                    android:text="Note: You have to upload at least two images" />
+            </LinearLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:visibility="gone">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerViewId"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="25dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/pager_bg"
+                    android:elevation="4dp"
+                    android:nestedScrollingEnabled="true"
+                    android:padding="5dp" />
+
+                <TextView
+                    android:id="@+id/noImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:elevation="4dp"
+                    android:gravity="center"
+                    android:text="No Image Selected"
+                    android:textColor="#ae863b" />
+            </FrameLayout>
+
+            <!--    <EditText-->
+            <!--        android:id="@+id/visitorPassword"-->
+            <!--        android:layout_width="match_parent"-->
+            <!--        android:layout_height="wrap_content"-->
+            <!--        android:background="@drawable/edittext_bg"-->
+            <!--        android:textColor="#fff"-->
+            <!--        android:gravity="left|center"-->
+            <!--        android:padding="15dp"-->
+            <!--        android:hint="Password"-->
+            <!--        android:textSize="15sp"-->
+            <!--        android:textColorHint="#A9A9A9"-->
+            <!--        android:elevation="4dp"-->
+            <!--        android:layout_margin="25dp"/>-->
+
+            <carbon.widget.Button
+                android:id="@+id/btnSendCode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="25dp"
+                android:background="@drawable/pager_bg"
+                android:elevation="4dp"
+                android:padding="15dp"
+                android:text="Send Code"
+                android:textColor="#ae863b"
+                android:textSize="15sp"
+                android:visibility="gone"
+                app:carbon_cornerRadius="15dp" />
+
+            <carbon.widget.Button
+                android:id="@+id/registerVisitor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="25dp"
+                android:background="@drawable/pager_bg"
+                android:elevation="4dp"
+                android:padding="15dp"
+                android:text="Register Visitor"
+                android:textColor="#ae863b"
+                android:textSize="15sp"
+                app:carbon_cornerRadius="15dp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!--    <carbon.widget.TextView-->
+    <!--        android:id="@+id/tvForgotPassword"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:gravity="center"-->
+    <!--        android:layout_gravity="center"-->
+    <!--        android:textColor="#ae863b"-->
+    <!--        android:text="@string/forgot_password"-->
+    <!--        android:layout_margin="10dp"/>-->
+
+    <!--    <carbon.widget.TextView-->
+    <!--        android:id="@+id/tvRegister"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:gravity="center"-->
+    <!--        android:layout_gravity="center"-->
+    <!--        android:textColor="#ae863b"-->
+    <!--        android:text="@string/no_account_register"-->
+    <!--        android:layout_margin="20dp"/>-->
+</carbon.widget.LinearLayout>

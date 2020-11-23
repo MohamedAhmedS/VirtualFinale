@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#292929"
+
+    tools:context=".MainActivity">
+
+    <carbon.widget.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="56dp" />
+
+    <com.example.virtualmeetingapp.SpaceTabLayout.SpaceTabLayoutUserType.SpaceTabLayout1
+        android:id="@+id/spaceTabLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_behavior="com.example.virtualmeetingapp.SpaceTabLayout.SpaceTabLayoutBehavior"
+        app:number_of_tabs="three_IconOnly"
+        app:starting_position="one" />
+
+    <com.example.virtualmeetingapp.SpaceTabLayout.SpaceTabLayoutUserType.SpaceTabLayout2
+        android:id="@+id/spaceTabLayout2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_behavior="com.example.virtualmeetingapp.SpaceTabLayout.SpaceTabLayoutBehavior2"
+        app:number_of_tabs="five"
+        app:starting_position="one" />
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

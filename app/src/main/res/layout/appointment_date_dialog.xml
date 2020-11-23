@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorWhite"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/colorPrimaryDark1">
+        <!--Seleect Options-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Select Date and Time"
+            android:textColor="@color/colorWhite"
+            android:textSize="15sp" />
+
+        <ImageView
+            android:id="@+id/close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/ic_close" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="8dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Select date: "
+            android:textColor="#000"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/appointmentDatePick"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/edittext_bg"
+            android:elevation="4dp"
+            android:gravity="left|center"
+            android:hint="Pick date"
+            android:padding="15dp"
+            android:textColor="#fff"
+            android:textColorHint="#A9A9A9"
+            android:textSize="15sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="8dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvSelectTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Select Time: "
+            android:textColor="#000"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/day"
+                android:checked="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/morning"
+                android:textColor="@color/colorPrimaryDark1" />
+            <!--            android:onClick="onRadioButtonClicked"-->
+            <RadioButton
+                android:id="@+id/afterNoon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/afterNoon"
+                android:textColor="@color/colorPrimaryDark1" />
+            <!--            android:onClick="onRadioButtonClicked"-->
+
+            <RadioButton
+                android:visibility="gone"
+                android:id="@+id/evening"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/evening"
+                android:textColor="@color/colorPrimaryDark1" />
+            <!--            android:onClick="onRadioButtonClicked"-->
+        </RadioGroup>
+        <Spinner
+            android:visibility="gone"
+            android:layout_marginTop="10dp"
+            android:id="@+id/timeSpinner"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/edittext_bg"
+            android:padding="10dp" />
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/btnAppoint"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:text="Appointment"
+        android:textColor="@color/colorWhite" />
+
+</LinearLayout>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/tvAppointmentID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorWhite"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Call Type" />
+
+    <TextView
+        android:id="@+id/tvVisitor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorWhite"
+        app:layout_constraintStart_toStartOf="@id/tvAppointmentID"
+        app:layout_constraintTop_toBottomOf="@id/tvAppointmentID"
+        tools:text="Visitor Name" />
+
+    <TextView
+        android:id="@+id/tvPrisoner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorWhite"
+        app:layout_constraintStart_toStartOf="@id/tvAppointmentID"
+        app:layout_constraintTop_toBottomOf="@id/tvVisitor"
+        tools:text="Prisoner Name" />
+
+    <TextView
+        android:id="@+id/tvDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorWhite"
+        app:layout_constraintStart_toStartOf="@id/tvAppointmentID"
+        app:layout_constraintTop_toBottomOf="@id/tvPrisoner"
+        tools:text="Start Time" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnEndAppointment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="End Call"
+        android:background="@color/carbon_red_400"
+        android:textColor="@color/carbon_white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvDate" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

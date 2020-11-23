@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorAccent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context=".VerificationActivity">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="72dp"
+        android:padding="16dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="Verification Code"
+        android:textColor="#ae863b"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Please type the verification code sent to +xxxxxxxxxx"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:textColor="#ae863b" />
+
+    <com.mukesh.OtpView
+        android:id="@+id/otp_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="72dp"
+        android:inputType="number"
+        android:itemBackground="@drawable/bg_otp_item"
+        android:textColor="#ae863b"
+        app:OtpHideLineWhenFilled="true"
+        app:OtpItemCount="6"
+        app:OtpItemSpacing="6dp"
+        app:OtpLineColor="@color/otp_item_state"
+        app:OtpState_filled="true"
+        app:OtpViewType="line" />
+
+    <carbon.widget.Button
+        android:id="@+id/btnVerify"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/pager_bg"
+        android:textColor="#ae863b"
+        android:padding="15dp"
+        android:layout_marginTop="77dp"
+        android:text="Verify"
+        app:carbon_cornerRadius="15dp"
+        android:textSize="15sp"
+        android:elevation="4dp"
+        android:layout_margin="25dp"/>
+</LinearLayout>

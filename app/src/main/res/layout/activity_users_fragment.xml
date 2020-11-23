@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#292929"
+    tools:context=".SpaceTabLayout.fragments.UsersFragment">
+
+    <!--    <com.google.android.material.appbar.AppBarLayout-->
+    <!--        android:id="@+id/bar"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:background="?android:attr/windowBackground">-->
+
+    <!--        <androidx.appcompat.widget.Toolbar-->
+    <!--            android:id="@+id/toolbar"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:background="?android:attr/windowBackground">-->
+
+    <carbon.widget.LinearLayout
+        android:id="@+id/bar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="#423e47"
+        android:padding="10dp"
+        android:orientation="horizontal"
+        android:weightSum="10">
+
+        <EditText
+            android:id="@+id/search_bar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="7"
+            android:background="@android:color/transparent"
+            android:drawableRight="@drawable/search"
+            android:hint="Search User..."
+            android:maxLines="1"
+            android:nestedScrollingEnabled="false"
+            android:textColorHint="#dcdcdc" />
+
+        <ImageView
+            android:id="@+id/btnClose"
+            android:layout_width="wrap_content"
+            android:layout_height="26dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:padding="1dp"
+            android:layout_weight="1"
+            android:background="@drawable/btnimage"
+            android:src="@drawable/close" />
+    </carbon.widget.LinearLayout>
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:layout_below="@+id/bar"
+        android:background="#dcdcdc" />
+    <!--        </androidx.appcompat.widget.Toolbar>-->
+
+    <!--    </com.google.android.material.appbar.AppBarLayout>-->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/view">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/moi"
+            android:layout_gravity="center"
+            android:alpha=".10"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"
+            tools:listitem="@layout/user_item" />
+
+        <TextView
+            android:id="@+id/noUser"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:elevation="4dp"
+            android:gravity="center"
+            android:text="No User Available"
+            android:textColor="#ae863b" />
+    </FrameLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<carbon.widget.LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#292929"
+    android:gravity="center">
+
+<!--    <carbon.widget.LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_margin="25dp"-->
+<!--        android:background="#423e47"-->
+<!--        android:orientation="horizontal"-->
+<!--        android:padding="5dp"-->
+<!--        app:carbon_cornerRadius="5dp"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/ivMoi"-->
+<!--        tools:ignore="UselessParent">-->
+
+<!--        <Spinner-->
+<!--            android:id="@+id/client"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:entries="@array/clients"-->
+<!--            android:overlapAnchor="false"-->
+<!--            android:popupBackground="#423e47"-->
+<!--            android:spinnerMode="dropdown" />-->
+
+<!--    </carbon.widget.LinearLayout>-->
+
+
+
+    <ImageView
+        android:id="@+id/ivMoi"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:src="@drawable/moi"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipToPadding="false"
+        android:paddingTop="32dp"
+        android:paddingBottom="32dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
+
+        <View
+            android:id="@+id/indicator"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:background="@drawable/tab_gradient_bg" />
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tab"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/tab_bg"
+            app:tabGravity="fill"
+            app:tabTextColor="#ae863b"
+            app:tabIndicatorColor="@null"
+            app:tabMode="fixed"
+            app:tabRippleColor="@null"
+            app:tabSelectedTextColor="#ffffff" />
+
+    </FrameLayout>
+
+
+
+        <carbon.widget.ViewPager
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:background="@drawable/pager_bg"
+            android:layout_weight="1"/>
+
+
+<!--    <LinearLayout-->
+<!--        android:id="@+id/linearLayout"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="vertical"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent">-->
+
+<!--        <carbon.widget.Button-->
+<!--            android:id="@+id/btnVisitor"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginLeft="30dp"-->
+<!--            android:layout_marginTop="5dp"-->
+<!--            android:layout_marginRight="30dp"-->
+<!--            android:background="#423e47"-->
+<!--            android:elevation="3dp"-->
+<!--            android:text="Visitor"-->
+<!--            android:textColor="#fff"-->
+<!--            android:textSize="15sp"-->
+<!--            app:carbon_cornerRadius="7dp"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--        <carbon.widget.Button-->
+<!--            android:id="@+id/btnPrisoner"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginLeft="30dp"-->
+<!--            android:layout_marginTop="10dp"-->
+<!--            android:layout_marginRight="30dp"-->
+<!--            android:layout_marginBottom="5dp"-->
+<!--            android:background="#423e47"-->
+<!--            android:elevation="3dp"-->
+<!--            android:text="Inmate"-->
+<!--            android:textColor="#fff"-->
+<!--            android:textSize="15sp"-->
+<!--            app:carbon_cornerRadius="7dp"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/btnVisitor" />-->
+<!--    </LinearLayout>-->
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:id="@+id/copyright"
+        android:gravity="center"
+        android:text="COPYRIGHT © 2020 - MINISTRY OF INTERIOR. ALL RIGHTS RESERVED."
+        android:textColor="#ae863b"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</carbon.widget.LinearLayout>

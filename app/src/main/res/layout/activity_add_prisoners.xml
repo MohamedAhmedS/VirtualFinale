@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<carbon.widget.LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.virtualmeetingapp.activites.AddPrisonersActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="25dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <com.hbb20.CountryCodePicker
+                    android:id="@+id/ccpAddPrisoners"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/countrycode"
+                    android:elevation="4dp"
+                    android:padding="8.8dp"
+                    app:ccpDialog_textColor="#fff"
+                    app:ccp_contentColor="#fff"
+                    app:ccp_defaultNameCode="AE"
+                    app:ccp_flagBorderColor="#fff"
+                    app:ccp_textSize="12sp" />
+
+                <EditText
+                    android:id="@+id/phoneNumberAddPrisoners"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/mobile"
+                    android:elevation="4dp"
+                    android:gravity="left|center"
+                    android:hint="Mobile Number"
+                    android:padding="15dp"
+                    android:textColor="#fff"
+                    android:textColorHint="#A9A9A9"
+                    android:textSize="15sp" />
+
+
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/nameAddPrisoners"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="25dp"
+                android:background="@drawable/edittext_bg"
+                android:elevation="4dp"
+                android:gravity="left|center"
+                android:hint="Username"
+                android:padding="15dp"
+                android:textColor="#fff"
+                android:textColorHint="#A9A9A9"
+                android:textSize="15sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/emailFirstName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="30dp"
+                    android:text="prisoner"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="20dp" />
+
+                <EditText
+                    android:id="@+id/emailAddPrisoner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="25dp"
+                    android:background="@drawable/edittext_bg"
+                    android:elevation="4dp"
+                    android:gravity="left|center"
+                    android:hint="Prisoner ID"
+                    android:inputType="number"
+                    android:padding="15dp"
+                    android:textColor="#fff"
+                    android:textColorHint="#A9A9A9"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="20dp"
+                    android:text="@string/moi.ae"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="20dp" />
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/passwordAddPrisoners"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="25dp"
+                android:background="@drawable/edittext_bg"
+                android:elevation="4dp"
+                android:gravity="left|center"
+                android:hint="Password"
+                android:padding="15dp"
+                android:textColor="#fff"
+                android:textColorHint="#A9A9A9"
+                android:textSize="15sp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/name_text_input"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="25dp"
+                android:background="@drawable/edittext_bg"
+                android:elevation="4dp"
+                android:gravity="center"
+                app:boxBackgroundMode="none"
+                app:boxCornerRadiusBottomEnd="15dp"
+                app:boxCornerRadiusBottomStart="15dp"
+                app:boxCornerRadiusTopEnd="15dp"
+                app:boxCornerRadiusTopStart="15dp"
+                app:boxStrokeWidth="0dp"
+                app:hintEnabled="false"
+                app:hintTextColor="#A9A9A9">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/descriptionAddPrisoners"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:hint="Description"
+                    android:lines="5"
+                    android:maxLines="5"
+                    android:textColorHint="#A9A9A9" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <carbon.widget.Button
+                android:id="@+id/btnAddPrisoners"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="25dp"
+                android:background="@drawable/pager_bg"
+                android:elevation="4dp"
+                android:padding="15dp"
+                android:text="Add Prisoners"
+                android:textColor="#ae863b"
+                android:textSize="15sp"
+                app:carbon_cornerRadius="15dp" />
+        </LinearLayout>
+    </ScrollView>
+
+</carbon.widget.LinearLayout>

@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.virtualmeetingapp">
+
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="elevatesecurity.myapplication.permission.MAPS_RECEIVE" />
+
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+
+    <uses-feature
+        android:name="android.hardware.camera2"
+        android:required="false" />
+
+    <meta-data
+        android:name="firebase_messaging_auto_init_enabled"
+        android:value="false" />
+    <meta-data
+        android:name="firebase_analytics_collection_enabled"
+        android:value="false" />
+
+    <application
+        android:name=".utils.App"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:replace="android:name">
+        <activity android:name=".activites.AppointmentListActivity" />
+        <activity android:name=".activites.AppointResponseListActivity" />
+        <activity android:name=".activites.VisitorProfileActivity" />
+        <activity android:name=".activites.PrisonerProfileActivity" />
+        <activity android:name=".activites.VisitorActivity" />
+        <activity android:name=".activites.ApproveVisitorActivity" />
+        <activity android:name=".activites.ViewListActivity" />
+        <activity android:name=".activites.PrisonersActivity" />
+        <activity android:name=".activites.PrisonersListActivity" />
+        <activity android:name=".activites.OfficersListActivity" />
+        <activity android:name=".activites.AddPrisonersActivity" />
+        <activity android:name=".activites.OfficersActivity" />
+        <activity android:name=".activites.AppointmentDetailsActivity" />
+        <activity android:name=".activites.OngoingAppointmentActivity" />
+
+        <!--        <provider-->
+        <!--            android:name="androidx.core.content.FileProvider"-->
+        <!--            android:authorities="${applicationId}.provider"-->
+        <!--            android:exported="false"-->
+        <!--            android:grantUriPermissions="true">-->
+        <!--            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" />-->
+        <!--        </provider>-->
+
+        <activity android:name=".activites.AddOfficersActivity" />
+        <activity android:name=".activites.AdminActivity" /> <!-- <activity android:name=".ClientTypeActivity"> -->
+        <!-- <intent-filter> -->
+        <!-- <action android:name="android.intent.action.MAIN" /> -->
+        <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+        <!-- </intent-filter> -->
+        <!-- </activity> -->
+        <activity
+            android:name=".activites.SplashScreenActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ClientTypeActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|fontScale"
+            android:screenOrientation="portrait"
+            tools:ignore="Instantiatable" />
+        <activity
+            android:name=".MainActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|fontScale"
+            android:screenOrientation="portrait"
+            tools:ignore="Instantiatable" />
+        <activity
+            android:name=".fragments.UserLoginFragment"
+            android:configChanges="keyboardHidden|orientation|screenSize|fontScale"
+            android:screenOrientation="portrait"
+            tools:ignore="Instantiatable" />
+        <activity
+            android:name=".CallingActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|fontScale"
+            android:screenOrientation="portrait"
+            tools:ignore="Instantiatable" />
+        <activity
+            android:name=".activites.VideoChatActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|fontScale"
+            android:screenOrientation="portrait"
+            tools:ignore="Instantiatable" />
+        <activity android:name=".VerificationActivity" />
+        <activity
+            android:name=".activites.ConversationsActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|fontScale"
+            android:screenOrientation="portrait"
+            tools:ignore="InnerclassSeparator,Instantiatable" />
+        <activity
+            android:name=".activites.ChatActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|fontScale"
+            android:screenOrientation="portrait"
+            tools:ignore="InnerclassSeparator,Instantiatable" />
+        <activity
+            android:name=".activites.VideoActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|fontScale"
+            android:screenOrientation="portrait"
+            tools:ignore="InnerclassSeparator,Instantiatable" />
+
+        <receiver android:name=".receivers.ReminderBroadcast" />
+        <receiver
+            android:name=".receivers.CallBroadcastReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="calling" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".receivers.BootCompletedReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.QUICKBOOT_POWERON" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name=".notifications.MyFirebaseMessagingService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+    </application>
+
+</manifest>

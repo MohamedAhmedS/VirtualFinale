@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<carbon.widget.LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".fragments.viewPagerFragment.InmateLogin">
+
+    <EditText
+        android:id="@+id/inmateEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edittext_bg"
+        android:textColor="#fff"
+        android:gravity="left|center"
+        android:padding="15dp"
+        android:textSize="15sp"
+        android:hint="@string/inmate_s_email_non_personal"
+        android:textColorHint="#A9A9A9"
+        android:elevation="4dp"
+        android:layout_margin="25dp"/>
+
+
+    <EditText
+        android:id="@+id/inmatePassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edittext_bg"
+        android:textColor="#fff"
+        android:gravity="left|center"
+        android:padding="15dp"
+        android:textSize="15sp"
+        android:hint="Password"
+        android:textColorHint="#A9A9A9"
+        android:elevation="4dp"
+        android:layout_margin="25dp"/>
+
+    <carbon.widget.Button
+        android:id="@+id/btnLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/pager_bg"
+        android:textColor="#ae863b"
+        android:padding="15dp"
+        android:text="Login"
+        app:carbon_cornerRadius="15dp"
+        android:textSize="15sp"
+        android:elevation="4dp"
+        android:layout_margin="25dp"/>
+</carbon.widget.LinearLayout>

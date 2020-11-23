@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Virtual Meeting App</string>
+    <string name="header">Select Client Type . . .</string>
+    <string name="forgot_password"><b><u>Forgot Password?</u></b></string>
+    <string name="no_account_register"><b><u>No Account? Register</u></b></string>
+    <string name="officer_s_email_non_personal">Officer\'s Email <b>(Non-Personal)</b></string>
+    <string name="admin_s_email_non_personal">Admin\'s Email <b>(Non-Personal)</b></string>
+    <string name="user_s_email_non_personal">User\'s Email <b>(Non-Personal)</b></string>
+    <string name="inmate_s_email_non_personal">Inmate\'s Email <b>(non-Personal)</b></string>
+    <string name="have_an_account_login"><b><u>Have an account? Login</u></b></string>
+    <string name="select_your_emirates_id"><b><u>Select Your Emirates ID</u></b></string>
+
+    <string name="moi.ae">"@"moi.ae</string>
+    <string name="morning">Morning</string>
+    <string name="afterNoon">Afternoon</string>
+    <string name="evening">Evening</string>
+
+    <string name="start_recording">START</string>
+    <string name="stop_recording">STOP</string>
+    <string name="record_audio">Record Audio</string>
+
+</resources>
