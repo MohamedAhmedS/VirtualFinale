@@ -202,6 +202,11 @@ public class ChatActivity extends BaseActivity {
             ivVideoCall.setVisibility(android.view.View.GONE);
             ivVoiceCall.setVisibility(android.view.View.GONE);
         }
+
+        if (currentUser.getUserType().equals(Constants.USER_TYPE_VISITOR) && isOfficerChat) {
+            ivVideoCall.setVisibility(android.view.View.GONE);
+            ivVoiceCall.setVisibility(android.view.View.GONE);
+        }
     }
 
     Handler btnMessageHandler = new Handler();
