@@ -201,7 +201,7 @@ public class VisitorRegister extends Fragment {
             final String str_description = description.getText().toString();
             final String str_email = visitorEmail.getText().toString();
             final String str_password = visitorPassword.getText().toString();
-            final Boolean isApproved = true;
+            final Boolean isApproved = false;
             final Boolean isOffListApproved = true;
             final Boolean isPriListApproved = false;
             final Boolean isChatApprovedByOfficer = false;
